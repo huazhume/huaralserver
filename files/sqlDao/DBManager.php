@@ -6,9 +6,9 @@
  * Date: 2017/2/20
  * Time: 13:13
  */
-define("SQL_HOST","");
-define("SQL_ROOT","");
-define("SQL_PASSWORD","");
+define("SQL_HOST","127.0.0.1");
+define("SQL_ROOT","root");
+define("SQL_PASSWORD","YUANjia258");
 
 class DBManager
 {
@@ -40,9 +40,8 @@ class DBManager
         }catch (Exception $exceptione){
 
         }
-//        mysql_select_db("database",$this->connectSource);
-//        mysql_query("set names UTF8",$this->connectSource);
-//        mysql_num_rows();
+        mysql_select_db("holedb",$this->connectSource);
+        mysql_query("set names UTF8",$this->connectSource);
         return $this->connectSource;
     }
 }

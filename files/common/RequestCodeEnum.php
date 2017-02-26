@@ -16,6 +16,7 @@
 class RequestCodeEnum
 {
     public static $son;
+
     const __default = 0;//未知
     const Request_SUCCESS = 200;
     const Request_ERRORREQUEST = 400;//请求错误
@@ -33,14 +34,14 @@ class RequestCodeEnum
     {
 
     }
-
     /**
      * 设置message值
      * @param $codeType 请求返回码
      * @return string 状态信息
      */
     private function setCodeMessage($codeType)
-    {   $message = "";
+    {
+        $message = "";
         switch ($codeType){
             case self::Request_SUCCESS:
                 $message = "成功";
@@ -72,7 +73,7 @@ class RequestCodeEnum
             case self::Request_NOSUPPORT:
                 $message = "不支持请求协议";
                 break;
-            case self::Request_PARAMERROR:
+            case self::Requset_PARAMERROR:
                 $message = "API参数错误";
                 break;
             default:

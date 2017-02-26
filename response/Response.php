@@ -27,6 +27,7 @@ class Response
         if(!is_numeric($msg_code)){
             return;
         }
+
         $result = array(
             'msg_code'=>$msg_code,
             'msg_error'=>$msg_error,
